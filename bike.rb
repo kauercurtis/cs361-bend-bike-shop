@@ -1,18 +1,16 @@
 # Bike
-require_relative 'luggage'
+# require_relative 'luggage'
 
 class Bike
 
-  STANDARD_WEIGHT = 200 # lbs
+  STANDARD_WEIGHT_POUNDS = 200
 
-  attr_reader :id, :color, :price, :weight, :luggage
+  attr_reader :id, :color, :weight
 
-  def initialize(id, color, price, extra_items)
+  def initialize(id, color)
     @id = id
     @color = color
-    @price = price
-    @weight = STANDARD_WEIGHT
-    @luggage = Luggage.new(Luggage::DEFAULT_MAX_CAPACITY, extra_items, self)
+    @weight = STANDARD_WEIGHT_POUNDS
   end
 
 end
